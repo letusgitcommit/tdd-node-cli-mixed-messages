@@ -20,14 +20,14 @@ describe('functional tests', () => {
 
 describe('unit tests', () => {
     test('test pickRandomMessage', () => {
-        example_message_array = [
+        exampleMessageArray = [
             'message one',
             'message two',
             'message three',
         ]
 
-        let message_picked = pickRandomMessage(example_message_array);
+        let message_picked = pickRandomMessage(exampleMessageArray);
 
-        expect(example_message_array).toContain(message_picked);
+        expect(exampleMessageArray).toContain(message_picked);
     });
 })
