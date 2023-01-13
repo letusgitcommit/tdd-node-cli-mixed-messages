@@ -1,6 +1,6 @@
 const { describe, expect, test } = require('@jest/globals');
 const { spawnSync } = require('node:child_process');
-const { pickRandomMessage } = require('./main.js');
+const { pickRandomMessage, formMessage } = require('./main.js');
 
 describe('functional tests', () => {
     test('command line application runs when called', () => {
