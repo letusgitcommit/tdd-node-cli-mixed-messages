@@ -1,6 +1,6 @@
-function pickRandomMessage(messageArray) {
-    const randomIndex = Math.floor(Math.random() * messageArray.length);
-    return messageArray[randomIndex];
+function pickRandomPhrase(phrases) {
+    const randomIndex = Math.floor(Math.random() * phrases.length);
+    return phrases[randomIndex];
 }
 
 function formMessage(messageArray){
@@ -43,9 +43,9 @@ function main() {
     ]
 
     const phrases = [
-        pickRandomMessage(subjectPhrases),
-        pickRandomMessage(verbPhrases),
-        pickRandomMessage(adjectivePhrases)
+        pickRandomPhrase(subjectPhrases),
+        pickRandomPhrase(verbPhrases),
+        pickRandomPhrase(adjectivePhrases)
     ]
 
     const message = formMessage(phrases);
@@ -54,7 +54,7 @@ function main() {
 }
 
 module.exports = {
-    pickRandomMessage: pickRandomMessage,
+    pickRandomPhrase: pickRandomPhrase,
     formMessage: formMessage,
 }
 

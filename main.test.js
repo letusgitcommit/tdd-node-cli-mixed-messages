@@ -1,6 +1,6 @@
 const { describe, expect, test } = require('@jest/globals');
 const { spawnSync } = require('node:child_process');
-const { pickRandomMessage, formMessage } = require('./main.js');
+const { pickRandomPhrase, formMessage } = require('./main.js');
 
 describe('functional tests', () => {
     test('command line application runs when called', () => {
@@ -19,26 +19,26 @@ describe('functional tests', () => {
 })
 
 describe('unit tests', () => {
-    test('test pickRandomMessage', () => {
-        const exampleMessageArray = [
+    test('test pickRandomPhrase', () => {
+        const examplePhrases = [
             'message one',
             'message two',
             'message three',
         ]
 
-        const message_picked = pickRandomMessage(exampleMessageArray);
+        const phrase = pickRandomPhrase(examplePhrases);
 
-        expect(exampleMessageArray).toContain(message_picked);
+        expect(examplePhrases).toContain(phrase);
     });
 
     test('test formMessage', () => {
-        const arrayOfMessages = [
+        const phrases = [
             'message one',
             'message two',
             'message three',
         ];
 
-        const formedMessage =  formMessage(arrayOfMessages);
+        const formedMessage =  formMessage(phrases);
 
         const exampleMessage = 'Message one message two message three.';
 
