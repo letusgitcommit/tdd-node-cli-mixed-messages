@@ -1,5 +1,6 @@
 const { describe, expect, test } = require('@jest/globals');
-const { spawnSync } = require('node:child_process')
+const { spawnSync } = require('node:child_process');
+const { randomMessagePicker } = require('./main.js');
 
 describe('functional tests', () => {
     test('command line application runs when called', () => {
@@ -14,6 +15,19 @@ describe('functional tests', () => {
         expect(output).toBeTruthy();
         // His node.js application runs, producing some random output. Satisfied,
         // he returns to whatever it was that he was doing previously.
-
     })
+})
+
+describe('unit tests', () => {
+    test('test randomMessagePicker', () => {
+        example_message_array = [
+            'message one',
+            'message two',
+            'message three',
+        ]
+
+        let message_picked = randomMessagePicker(example_message_array);
+
+        expect(example_message_array).toContain(message_picked);
+    });
 })
