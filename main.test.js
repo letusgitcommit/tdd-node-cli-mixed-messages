@@ -20,14 +20,28 @@ describe('functional tests', () => {
 
 describe('unit tests', () => {
     test('test pickRandomMessage', () => {
-        exampleMessageArray = [
+        const exampleMessageArray = [
             'message one',
             'message two',
             'message three',
         ]
 
-        let message_picked = pickRandomMessage(exampleMessageArray);
+        const message_picked = pickRandomMessage(exampleMessageArray);
 
         expect(exampleMessageArray).toContain(message_picked);
+    });
+
+    test('test formMessage', () => {
+        const arrayOfMessages = [
+            'message one',
+            'message two',
+            'message three',
+        ];
+
+        const formedMessage =  formMessage(arrayOfMessages);
+
+        const exampleMessage = 'Message one message two message three.';
+
+        expect(formedMessage).toStrictEqual(exampleMessage);
     });
 })
