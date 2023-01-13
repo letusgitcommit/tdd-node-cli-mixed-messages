@@ -15,7 +15,6 @@ function formMessage(messageArray){
 }
 
 function main() {
-
     const subjectPhrases = [
         'the sun',
         'the moon',
